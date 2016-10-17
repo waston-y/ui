@@ -45,6 +45,16 @@ h2{
     position: absolute;
     right: -30px;
     top: 150px;
+
+    p{
+        height: 40px;
+        background: #007acc;
+        color: white;
+
+        a{
+            line-height: 40px;
+        }
+    }
 }
 
 
@@ -93,7 +103,6 @@ h2{
 
 .btn-cancel{
     .btn-style(#000,  #e6ebf3, rgb(216, 221, 228));
-
     &:hover{
         color: #666666;
     }
@@ -195,4 +204,26 @@ h2{
     background: #f0f0f0;
     border: 1px solid #e5e5e5;
     text-shadow: 1px 1px 1px #fff;
+}
+
+.tag-build (@bgColor: #fff, @ftColor: #000) {
+    padding: 3px 5px;
+    background: @bgColor;
+    color: @ftColor;
+    border-radius: 4px;
+}
+
+.tag{
+    &.primary{
+        .tag-build(#3b9ff3, #fff);
+    }
+    &.success{
+        .tag-build(#96bf48, #fff);
+    }
+    &.danger{
+        .tag-build(#b85e80, #fff);
+    }
+    &.info{
+        .tag-build(#5ba0a3, #fff);
+    }
 }
